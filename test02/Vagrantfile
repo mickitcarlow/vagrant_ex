@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.define "primary" do |primary|
+    primary.vm.box = "ubuntu/focal64"
+    primary.vm.network "private_network", ip: "10.0.2.10"
+    primary.vm.provider "virtualbox" do |vb|
+        vb.memory = 1048
+        vb.cpus = 2
+    end
+  end
+
+  config.vm.define "secondary" do |secondary|
+    secondary.vm.box = "ubuntu/focal64"
+    secondary.vm.network "private_network", ip: "10.0.2.11"
+    secondary.vm.provider "virtualbox" do |vb|
+        vb.memory = 2048
+        vb.cpus = 1
+    end
+  end
+end
