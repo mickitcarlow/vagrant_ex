@@ -11,3 +11,4 @@ test 03 shows you how to include a shell script to perform per node configuratio
 Here is a decent link to walk you through the basics of Vagrant:
 
 https://devopscube.com/vagrant-tutorial-beginners/ 
+# vagrant_ex
